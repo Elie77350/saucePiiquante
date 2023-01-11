@@ -1,42 +1,53 @@
-HOT TAKES
+HOT TAKES (sauce PIiquante)
 
-Bonjour, veuillez suivre les instructions pour afficher le site :
+Veuillez suivre les instructions suivante, pour afficher le site :
 
-/////////////FRONTEND//////////////
 
-Cloner repo "frontend" à cette adresse https://github.com/OpenClassrooms-Student-Center/Web-Developer-P6
+----------------------------------------------------------------------------------------
 
-depuis le terminal sur le dossier "frontend"
 
-npm install -g @angular/cli
+[FRONTEND]
+
+Veuillez cloner le repo du dossier frontend cette adresse https://github.com/OpenClassrooms-Student-Center/Web-Developer-P6
+
+A partir du terminal dans le dossier "frontend", saisir les commandes suivantes : 
+
+npm install @angular/cli
 
 npm run start
 
 
-//////////////BACKEND//////////////
+-----------------------------------------------------------------------------------------
 
-depuis le terminal sur le dossier "backend"
+
+[BACKEND]
+
+A partir du terminal dans le dossier "backend", saisir les commandes suivantes : 
 
 npm install
 
 npm start
 
-Pour tester les fonctionnalités de l'app merci de suivre les étapes suivantes:
+Veuillez suivre les étapes suivantes pour utiliser l'application:
 
-Créer un compte sur mongoDB atlas https://www.mongodb.com/cloud/atlas/register
+Créer un compte sur le site mongoDB à cette adresse https://www.mongodb.com/cloud/atlas/register
 
-dans le dossier Backend créez un fichier .env 
+Créez un dossier Backend et y insérer un fichier .env 
 
-Insérer dedans ces  variables d'environnements:
 
-PORT = 'celui de votre choix'
+-------------------------------------------------------------------------------------------
 
-DB_USERNAME = "XXXXXXXXXX"
 
-DB_PASSWORD = "XXXXXXXXXXX"
+Placez vos variables d'environnements:
 
-DB_CLUSTER = "clustervous.XXXXXXXXXXX"
+PORT = 'au choix'
 
-TOKEN_SECRET = "XXXXXXXXXXXXXX"
+DB_USERNAME = "............."
 
-CLE_EMAIL = "XXXXXXXXXXXXXXXXXX"
+DB_PASSWORD = ".............."
+
+DB_CLUSTER = "................."
+
+TOKEN_SECRET = "..............."
+
+CLE_EMAIL = "...................."
