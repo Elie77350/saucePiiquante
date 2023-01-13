@@ -104,13 +104,13 @@ exports.sauceLike = (req, res, next) => {
 			switch (req.body.like) {
 				case 1:
 
-					if (!sauce.usersLiked.includes(req.body.userId)) {
+					if (!sauce.usersLiked.includes(req.auth.userId)) {
 
 						Sauce.updateOne(
 							{ _id: req.params.id },
 							{
 								$inc: { likes: 1 },
-								$push: { usersLiked: req.body.userId },
+								$push: { usersLiked: req.auth.userId },
 							}
 						)
 							.then(() => {res.status(201).json({ message: 'your like this sauce' });
@@ -126,7 +126,7 @@ exports.sauceLike = (req, res, next) => {
 							{ _id: req.params.id },
 							{
 								$inc: { dislikes: 1 },
-								$push: { usersDisliked: req.body.userId },
+								$push: { usersDisliked: req.auth.userId },
 							}
 						)
 							.then(() => {res.status(201).json({ message: "you don't like this sauce" });
@@ -137,12 +137,12 @@ exports.sauceLike = (req, res, next) => {
 				
 				case 0:
 
-					if (sauce.usersLiked.includes(req.body.userId)) {
+					if (sauce.usersLiked.includes(req.auth.userId)) {
 						Sauce.updateOne(
 							{ _id: req.params.id },
 							{
 								$inc: { likes: -1 },
-								$pull: { usersLiked: req.body.userId },
+								$pull: { usersLiked: req.auth.userId },
 								
 							}
 						)
@@ -155,7 +155,7 @@ exports.sauceLike = (req, res, next) => {
 							{ _id: req.params.id },
 							{
 								$inc: { dislikes: -1 },
-								$pull: { usersDisliked: req.body.userId },
+								$pull: { usersDisliked: req.auth.userId },
 							}
 						)
 							.then(() => {res.status(201).json({ message: 'you have removed your dislike vote' });
