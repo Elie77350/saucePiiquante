@@ -20,7 +20,7 @@
     "moment": "^2.29.4",
     "mongoose": "^6.11.3",
     "mongoose-unique-validator": "^3.1.0",
-    "multer": "^1.4.5-lts.1",
+    "multer": "^2.0.2",
     "password-validator": "^5.3.0"
   },
   "description": "HOT TAKES",
